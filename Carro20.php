@@ -1,33 +1,36 @@
 <?php
 
+namespace Ford;
+
 /**
- * Description of Carro20
+ * Carro 2.0
  *
  * @author aluno
  */
-class Carro20 extends Carro {
-
-private $pilotoAutomatico = false;
-
-
-/**
- * Liga piloto autormatico
- */
-public function ligarPilotoAutomatico()
+class Carro20 extends Carro 
 {
-$this->pilotoAutomatico = true;
-parent::ligar();
-}
-/**
- * 
- * Sobrecarga - sobreescrita
- */
-public function __construct($cor = "Branca")
- {
-//faz o fluxo do pai
-    parent::__construct($cor);
+    private $pilotoAutomotatico = false;
     
-    $this->potencia = 2.0;
- }
-
+    
+    /**
+     * Liga o autopilot
+     */
+    public function ligarPilotoAutomotico()
+    {
+        $this->pilotoAutomotatico = true;
+        parent::ligar();
+        
+    }
+    
+    /*
+     * Sobrecarga - sobreescrita
+     */
+    public function __construct($cor = "Branca", $motor) 
+    {
+        //faz o fluxo do pai
+        parent::__construct($cor, $motor);
+        
+        $this->potencia = 2.0;
+        
+    }
 }
